@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocean Day</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #0077be, #00aaff);
+      color: white;
+      text-align: center;
+    }
+    .header {
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    .ocean {
+      position: relative;
+      height: 300px;
+      background: #005f99;
+      overflow: hidden;
+    }
+    .wave {
+      position: absolute;
+      width: 200%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.5);
+      opacity: 0.7;
+      border-radius: 50%;
+      animation: wave-animation 6s infinite linear;
+    }
+    .wave:nth-child(2) {
+      animation-delay: -3s;
+    }
+    @keyframes wave-animation {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(50%); }
+    }
+    .message {
+      padding: 20px;
+      font-size: 1.2rem;
+    }
+    .message a {
+      color: #ffdd00;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .message a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Happy Ocean Day!</h1>
+    <p>Let's protect and cherish our oceans.</p>
+  </div>
+  <div class="ocean">
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+  <div class="message">
+    <p>Learn more about how you can help: <a href="https://www.worldoceanday.org" target="_blank">World Ocean Day</a></p>
+  </div>
+</body>
+</html>
